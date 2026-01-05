@@ -1,0 +1,10 @@
+### Register a New User
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "firstName": "IntelliJ",
+  "lastName": "someone",
+  "email": "roman@test.com",
+  "password": "securePass123"
+}
