@@ -8,3 +8,27 @@ Content-Type: application/json
   "email": "roman@test.com",
   "password": "securePass123"
 }
+
+### Log a New Activity
+POST http://localhost:8080/api/activities
+Content-Type: application/json
+
+{
+  "type": "WEIGHT_TRAINING",
+  "userId": "c8ce8a49-dcd1-4db4-9d9a-1670139052e3",
+  "duration": 35,
+  "caloriesBurned": 300,
+  "startTime": "2024-06-15T10:00:00",
+  "additionalMetrics": {
+    "exercises": ["Bench Press", "Squats"],
+    "sets": [],
+    "reps": [],
+    "weights": []
+  }
+}
+
+
+### Get All Activities for a User (Using Header)
+GET http://localhost:8080/api/activities
+x-User-ID: c8ce8a49-dcd1-4db4-9d9a-1670139052e3
+Accept: application/json
